@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrasi Fieldtrip - Kristoper Zamago</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #006400, #90EE90, #ffffff);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Navigasi */
+    nav {
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      border-bottom: 2px solid #003300;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: darkblue;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #004d00;
+    }
+
+    /* Container Form */
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 450px;
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #003300;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #006400;
+      border-radius: 6px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #004d00;
+      background-color: #f0fff0;
+    }
+
+    .btn {
+      background-color: #006400;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #004d00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="myHoliday.html">My Holiday</a>
+    <a href="registration.html">Registration</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Form Registrasi -->
+  <div class="form-container">
+    <h2>Registrasi Fieldtrip</h2>
+    <form>
+      <input type="text" id="fullname" name="fullname" placeholder="Full Name" required />
+      <input type="date" id="birthdate" name="birthdate" required />
+      <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
+      <input type="email" id="email" name="email" placeholder="Email Address" required />
+      <textarea id="address" name="address" rows="3" placeholder="Address" required></textarea>
+      <input type="text" id="town" name="town" placeholder="Town" required />
+      <input type="text" id="zipcode" name="zipcode" placeholder="Zip Code" required />
+      <button type="submit" class="btn">Daftar</button>
+    </form>
+  </div>
+
+</body>
+</html>
